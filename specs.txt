@@ -1,0 +1,23 @@
+Users can be of 2 types 
+    - seeded nameless users
+    - sso business users
+
+Features
+    - features are grouped into Category, SubCategory 
+        - eg: platform\usermanagement
+        - eg: application\usermanagement
+    - features will have feature name and Id, and possible permissions like "read_applicable", "write_applicable"
+    - Access to feature is scoped like eg:
+        - Global
+        - ResourceType level like ("workspace", "document", "application", "entity" ...)
+
+Role
+    - Role is mapped to a set of features and applicable permissions.
+
+group   
+    - Group is set of roles mapped and assigned
+
+Role Assignment:
+    - Users or Groups can be assigned a role
+    - when assigning a role system has to be ask for scope and resourceType definition specifications
+    - so that users or groups assigned to that role will have access to that feature and scoped to a specific entity or workspace or application etc..

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.1",
+  "type_definitions": [
+    {
+      "type": "user",
+      "relations": {
+        "member_of": { "this": {} },
+        "role_assignment": { "this": {} }
+      }
+    },
+    {
+      "type": "group",
+      "relations": {
+        "member": { "this": {} },
+        "role_assignment": { "this": {} }
+      }
+    },
+    {
+      "type": "role",
+      "relations": {
+        "feature": { "this": {} }
+      },
+      "metadata": {
+        "description": "Master data: defines a set of permissions/features."
+      }
+    },
+    {
+      "type": "feature",
+      "relations": {
+        "category": { "this": {} },
+        "subcategory": { "this": {} }
+      },
+      "metadata": {
+        "description": "Feature with name, id, permissions."
+      }
+    },
+    {
+      "type": "roleassignment",
+      "relations": {
+        "role": { "this": {} },
+        "scope": { "this": {} },
+        "resourcetype": { "this": {} },
+        "resourceid": { "this": {} }
+      },
+      "metadata": {
+        "description": "Assignment of a role to a user/group, with scope, resource type, and resource id."
+      }
+    },
+    {
+      "type": "scope",
+      "relations": {}
+    },
+    {
+      "type": "resourcetype",
+      "relations": {}
+    },
+    {
+      "type": "resourceid",
+      "relations": {}
+    },
+    {
+      "type": "category",
+      "relations": {}
+    },
+    {
+      "type": "subcategory",
+      "relations": {}
+    }
+  ]
+}
