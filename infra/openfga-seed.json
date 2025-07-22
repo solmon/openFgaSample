@@ -1,17 +1,17 @@
-[
-    { "user": "user:superadmin", "relation": "member_of", "object": "group:ApplicationUserAdmin" },
-    { "user": "user:userone@energyai.com", "relation": "member_of", "object": "group:ProactivePlantUsers" },
-    { "user": "user:usertwo@energyai.com", "relation": "member_of", "object": "group:ApplicationUserAdmin" },
-    { "user": "group:ProactivePlantUsers", "relation": "member", "object": "user:userone@energyai.com" },
-    { "user": "group:ApplicationUserAdmin", "relation": "member", "object": "user:usertwo@energyai.com" },
-    { "user": "feature:useradministrator", "relation": "category", "object": "category:platform" },
-    { "user": "feature:useradministrator", "relation": "subcategory", "object": "subcategory:usermanagement" },
-    { "user": "feature:useradministrator", "relation": "scope", "object": "scope:Global" },
-    { "user": "feature:useradministrator", "relation": "resoucretype", "object": "resoucretype:NA" },
-    { "user": "feature:plantviewer", "relation": "category", "object": "category:proactivecare" },
-    { "user": "feature:plantviewer", "relation": "subcategory", "object": "subcategory:plantadmin" },
-    { "user": "feature:plantviewer", "relation": "scope", "object": "scope:ProactiveCare" },
-    { "user": "feature:plantviewer", "relation": "resoucretype", "object": "resoucretype:Plant" },
-    { "user" : "role:applicationadministrator", "relation": "feature", "object": "feature:useradministrator" },
-    { "user" : "role:plantadministrator", "relation": "feature", "object": "feature:plantviewer" }
+[    
+    { "user": "user:superadmin", "relation": "member", "object": "group:ApplicationUserAdmin" },
+    { "user": "user:userone@energyai.com", "relation": "member", "object": "group:ProactivePlantUsers" },
+    { "user": "user:usertwo@energyai.com", "relation": "member", "object": "group:ApplicationUserAdmin" },
+    { "user": "group:ProactivePlantUsers", "relation": "member_of", "object": "user:userone@energyai.com" },
+    { "user": "group:ApplicationUserAdmin", "relation": "member_of", "object": "user:usertwo@energyai.com" }
+    { "user": "category:platform", "relation": "category", "object": "feature:useradministrator" },
+    { "user": "subcategory:usermanagement", "relation": "subcategory", "object": "feature:useradministrator" },
+    { "user": "scope:Global", "relation": "scope", "object": "feature:useradministrator" },
+    { "user": "resourcetype:NA", "relation": "resourcetype", "object": "feature:useradministrator" },
+    { "user": "category:proactivecare", "relation": "category", "object": "feature:plantviewer" },
+    { "user": "subcategory:plantadmin", "relation": "subcategory", "object": "feature:plantviewer" },
+    { "user": "scope:ProactiveCare", "relation": "scope", "object": "feature:plantviewer" },
+    { "user": "resourcetype:Plant", "relation": "resourcetype", "object": "feature:plantviewer" },
+    { "user" : "feature:useradministrator", "relation": "feature", "object": "role:applicationadministrator" },
+    { "user" : "feature:plantviewer", "relation": "feature", "object": "role:plantadministrator" }
 ]
